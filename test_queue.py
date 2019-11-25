@@ -1,15 +1,26 @@
+"""
+docstring
+"""
 import pytest
 
 import queue
 
 
 def test_push_pop():
+    """
+
+    :return:
+    """
     q = queue.Queue(5)
     q.push(1)
     assert q.pop() == 1
 
 
 def test_double_push_pop():
+    """
+
+    :return:
+    """
     q = queue.Queue(5)
     q.push(1)
     q.push(2)
@@ -18,12 +29,20 @@ def test_double_push_pop():
 
 
 def test_empty():
+    """
+
+    :return:
+    """
     q = queue.Queue(5)
     with pytest.raises(IndexError):
         assert q.pop()
 
 
 def test_full():
+    """
+
+    :return:
+    """
     q = queue.Queue(5)
     for i in range(5):
         q.push(i)
@@ -32,6 +51,10 @@ def test_full():
 
 
 def test_length():
+    """
+
+    :return:
+    """
     q = queue.Queue()
     for i in range(5):
         q.push(1)
@@ -39,8 +62,7 @@ def test_length():
         assert q.pop() == 1
     for i in range(3):
         q.push(2)
-    for i in range(3):
-        assert q.pop() == 2
     for i in range(2):
         assert q.pop() == 1
-
+    for i in range(3):
+        assert q.pop() == 2
