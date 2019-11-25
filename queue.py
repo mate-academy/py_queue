@@ -1,10 +1,20 @@
+"""module docstring"""
 class Queue:
-    def __init__(self, length: int):
-        ...
+    """class docstring"""
 
-    def push(self, value: int):
-        ...
+    def __init__(self, length=None):
+        """def docstring"""
+        self.array = []
+        self.length = length
 
-    def pop(self) -> int:
+    def push(self, value):
+        """def docstring"""
+        if len(self.array) == self.length and self.length is not None:
+            raise IndexError
+        self.array.append(value)
 
-        return 0
+    def pop(self):
+        """def docstring"""
+        if not self.array:
+            raise IndexError
+        return self.array.pop(0)
