@@ -39,8 +39,8 @@ def test_length():
         assert q.pop() == 1
     for i in range(3):
         q.push(2)
-    for i in range(3):
-        assert q.pop() == 2
     for i in range(2):
         assert q.pop() == 1
+    for i in range(3):
+        assert q.pop() == 2
 
