@@ -3,7 +3,7 @@
 
 class Queue:
     """class FIFO"""
-    def __init__(self, length=10):
+    def __init__(self, length=0):
         self.array = []
         self.maxlength = length
 
@@ -13,7 +13,7 @@ class Queue:
         :param value: new element
         :return: None
         """
-        if len(self.array) >= self.maxlength:
+        if self.maxlength and len(self.array) >= self.maxlength:
             raise IndexError
         self.array.append(value)
 
