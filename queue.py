@@ -1,10 +1,20 @@
+"""FIFO Queue"""
+
+
 class Queue:
-    def __init__(self, length: int):
-        ...
+    """Queue class"""
+    def __init__(self, length=None):
+        self.arr = []
+        self.length = length
 
     def push(self, value: int):
-        ...
+        """Check length before add new item"""
+        if len(self.arr) == self.length:
+            raise IndexError
+        self.arr.append(value)
 
     def pop(self) -> int:
-
-        return 0
+        """Remove first item"""
+        if not self.arr:
+            raise IndexError
+        return self.arr.pop(0)
