@@ -1,6 +1,7 @@
 """Implement FIFO queue according to the given interface. Queue must have a limited length."""
 from typing import List
 
+
 class Queue:
     """FIFO queue implementation"""
     def __init__(self, length: int = 0):
