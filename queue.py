@@ -1,13 +1,17 @@
 """
 queue
 """
+from typing import List
+from builtins import int
+
+
 class Queue:
     """
     push
     pop
     """
     def __init__(self, length: int = 0):
-        self.data = []
+        self.data: List[int] = []
         self.size = length
 
     def push(self, value: int):
