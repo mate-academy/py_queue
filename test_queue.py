@@ -44,3 +44,4 @@ def test_length():
     for i in range(3):
         assert q.pop() == 2
 
+
