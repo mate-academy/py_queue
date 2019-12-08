@@ -6,7 +6,7 @@ class Queue:
     """Queue class"""
     def __init__(self, length: int = 0):
         """queue constructor."""
-        self.queue: List = []
+        self.queue: List[int] = []
         self.length = length
 
     def push(self, data: int):
